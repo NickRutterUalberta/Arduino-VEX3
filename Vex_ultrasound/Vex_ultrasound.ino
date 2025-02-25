@@ -6,7 +6,7 @@ void setup() {
   Serial.begin(9600);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
-
+  
 }
 
 void loop() {
@@ -20,11 +20,15 @@ void loop() {
   long duration = pulseIn(echoPin, HIGH);
   long distance = duration * 0.034 / 2;
   
-  if (distance <=60)
+  
+  if (distance <=60){
     digitalWrite(led, HIGH);
-    else
+    Serial.print("Yes");
+  }
+  else{
     digitalWrite(led, LOW);
-
+    Serial.print("No");
+  }
   Serial.print(distance);
   Serial.println(" cm");
     delay(50);
