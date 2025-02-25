@@ -4,7 +4,8 @@ Exploration
 Hyperlinks
 - Exploration of PlatformIO, <a href="https://github.com/MercersKitchen/Arduino-VEX3?tab=readme-ov-file#arduino-vex3">Text Here</a>
 - VEX Ultrasonic, <a href="https://github.com/MercersKitchen/Arduino-VEX3/tree/main?tab=readme-ov-file#vex-ultrasonic">Text Here</a>
-    - <a href="https://github.com/MercersKitchen/Arduino-VEX3/tree/main/Vex_ultrasound">Code Here</a>
+    - <a href="https://github.com/MercersKitchen/Arduino-VEX3/blob/main/Vex_ultrasound/Vex_ultrasound.ino">Code Here</a>
+    - See Folder above for Images
 - TBA, <a href="">Text Here</a>
 - TBA, <a href="">Code Here</a>
 
