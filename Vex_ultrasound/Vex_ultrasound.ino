@@ -1,35 +1,30 @@
-const int trigPin = 9;
-const int echoPin = 10;
+const int outputPin = 9; // Yellow wire (Echo)
+const int inputPin = 10;  // Orange wire (Trigger)
 const int led = 8;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  
+  pinMode(outputPin, INPUT);
+  pinMode(inputPin, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(trigPin, LOW);
+  digitalWrite(inputPin, LOW);
   delayMicroseconds(2);
-  
-  digitalWrite(trigPin, HIGH);
+  digitalWrite(inputPin, HIGH);
   delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
+  digitalWrite(inputPin, LOW);
 
-  long duration = pulseIn(echoPin, HIGH);
-  long distance = duration * 0.034 / 2;
+  long duration = pulseIn(outputPin, HIGH);
+  long distance = duration / 58; // Conversion to cm
   
-  
-  if (distance <=60){
+  if (distance <= 60) {
     digitalWrite(led, HIGH);
-    Serial.print("Yes");
-  }
-  else{
+  } else {
     digitalWrite(led, LOW);
-    Serial.print("No");
   }
   Serial.print(distance);
   Serial.println(" cm");
-    delay(50);
+  
+  delay(100);
 }
