@@ -12,8 +12,8 @@ void loop() {
     
     // Print values to Serial Monitor
     Serial.print("Potentiometer Value: ");
-    Serial.print(potentiometerValue);
-    Serial.print(" | Mapped Angle: ");
+    Serial.println(potentiometerValue);
+    Serial.print("Mapped Angle: ");
     Serial.println(angle);
 
     delay(90);
