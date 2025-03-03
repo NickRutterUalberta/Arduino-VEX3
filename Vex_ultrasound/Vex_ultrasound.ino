@@ -2,7 +2,7 @@ const int outputPin = 9; // Yellow wire (Echo)
 const int inputPin = 10;  // Orange wire (Trigger)
 const int led = 8;
 
-void setup() {
+void setup() {  
   Serial.begin(9600);
   pinMode(outputPin, INPUT);
   pinMode(inputPin, OUTPUT);
