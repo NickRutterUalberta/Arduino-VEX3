@@ -1,7 +1,7 @@
 #define POTENTIOMETER_PIN A3  // Analog pin for potentiometer
 
 void setup() {
-    Serial.begin(9600);  // Start serial communication
+    Serial.begin(9600); 
 }
 
 void loop() {
